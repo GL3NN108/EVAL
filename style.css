@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: image("banner.png");
+    font-family: 'Tangerine';
+}
+
+.w33{
+    width: 33%;
+    height: 50px;
+}
+.container{
+    align-content: center;
+    background-color: antiquewhite;
+    padding-left: 100px;
+    margin-left: 100px;
+    height: 75%;
+    width: 33%;
+}
