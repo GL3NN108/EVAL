@@ -1,16 +1,9 @@
-const express = require("express")
+const express = require('express');
+const app = express();
 
-const app = express()
+app.use(express.json());
 
-app.get('/user/:uid/text/:file', function(req, res){
-  var uid = req.params.uid
-    , file = req.params.file;
+app.get('/api', (req, res) => 
+    res.json({ message: 'API is running' }));
 
-  req.user.mayViewFilesFrom(uid, function(yes){
-    if (yes) {
-      res.sendFile('/uploads/' + uid + '/' + file);
-    } else {
-      res.send(403, "Error");
-    }
-  });
-});
+app.listen(3000, () => console.log('Server running on port 3000 http://localhost:3000'));
